@@ -5,8 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Subscribe From</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Dosis|Nosifer');
+
+        body {
+            background: #f4f4f4;
+        }
+
+        h1 {
+            font-family: 'Nosifer', cursive;
+        }
+
+        form#subscribeForm {
+            font-family: 'Dosis', sans-serif;
+            margin-top: 35px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 1px 7px #000;
+        }
+
+        form#subscribeForm input {
+            box-shadow: 0 1px 7px #000;
+        }
+    </style>
+    <!-- reCaptcha Google-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-    <h2>Hello</h2>
+    <div class="container">
+        <h1 class="mt-5 text-center">Subscribe</h1>
+        <form id="subscribeForm" class="col-md-6 mx-auto">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <div class="g-recaptcha  mx-auto col-md-8 my-4" data-sitekey="6LffYTQUAAAAALMWZgHBUBIFoM4dELcVVoqiCItE"></div>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primary btn-block">
+        </form>
+      </div>
 </body>
 </html>
