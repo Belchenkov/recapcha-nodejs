@@ -6,4 +6,5 @@
 1. git clone
 2. cd recapcha-nodejs
 3. npm i 
-4. 
+4. npm start
+5. open http://localhost:3002 in browser
