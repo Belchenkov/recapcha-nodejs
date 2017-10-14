@@ -48,10 +48,34 @@
             <input type="text" name="email" id="email" class="form-control">
           </div>
           <div class="form-group">
-            <div class="g-recaptcha  mx-auto col-md-8 my-4" data-sitekey="6LffYTQUAAAAALMWZgHBUBIFoM4dELcVVoqiCItE"></div>
+            <div class="g-recaptcha mx-auto col-md-8 my-4" data-sitekey="6LffYTQUAAAAALMWZgHBUBIFoM4dELcVVoqiCItE"></div>
           </div>
           <input type="submit" value="Submit" class="btn btn-primary btn-block">
         </form>
       </div>
+
+      <script>
+          document.getElementById('subscribeForm').addEventListener('submit', submitForm);
+          function submitForm(e){
+            e.preventDefault();
+            
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const captcha = document.querySelector('#g-recaptcha-response').value;
+            fetch('/subscribe', {
+              method:'POST',
+              headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-type':'application/json'
+              },
+              body:JSON.stringify({name:name, email: email, captcha: captcha})
+            })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              alert(data.msg);
+            });
+          }
+      </script>
 </body>
 </html>
