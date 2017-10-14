@@ -1,0 +1,24 @@
+{
+  "name": "recapchanodejs",
+  "version": "1.0.0",
+  "description": "Google reCapcha used Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belchenkov/recapcha-nodejs.git"
+  },
+  "keywords": [
+    "Node.js",
+    "reCapcha",
+    "Google"
+  ],
+  "author": "ABelchenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belchenkov/recapcha-nodejs/issues"
+  },
+  "homepage": "https://github.com/Belchenkov/recapcha-nodejs#readme"
+}
